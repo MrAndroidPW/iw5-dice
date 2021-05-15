@@ -46,9 +46,10 @@ binary(value){
         middle = Int(Floor((left + right) * 0.5));
         if(value == level.dice[middle].probability) return middle;
         if(value < level.dice[middle].probability) right = middle - 1;
-            else left = middle + 1;
+        else left = middle + 1;
     }
-    if(left < level.dice.size - 1 && value > level.dice[left].probability) return left + 1;
+    if(left < level.dice.size - 1 && value > level.dice[left].probability)
+        return left + 1;
     return left;
 }
 
